@@ -20,7 +20,8 @@ It uses the following data files:
 
 ## Explore analysis in RStudio
 
-[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/main?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=rstudio)
+
 
 # License
 
