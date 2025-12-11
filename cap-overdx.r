@@ -122,7 +122,7 @@ plot(mynewdta$x, lw4$fitted, type="l", xlab="Time t (years)", ylab="Difference i
 grid()
 
 ## Plot (c): Excess (smoothed)
-plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Net Overdiagnosis O*(t), %", ylim=c(0,100), main="(c)")
+plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Screen-detected cancer excess O*(t), %", ylim=c(0,100), main="(c)")
 ##lines(c(0,15), c(10,10),lty=2, col="gray")
 grid()
 
@@ -191,9 +191,15 @@ thisref2<-mymort_ref$xpc[51:65]
 ## Probability prostate cancer not diagnosed by end 15y
 fn.overdxc2(thisref2)
 
-## age 70y (to 85)
-thisref1<-mymort_ref$mort[71:85]
-thisref2<-mymort_ref$xpc[71:85]
+## age 59y (to 74)
+thisref1<-mymort_ref$mort[60:74]
+thisref2<-mymort_ref$xpc[60:74]
+1-prod(1-thisref1)
+fn.overdxc2(thisref2)
+
+## age 64y (to 79)
+thisref1<-mymort_ref$mort[65:79]
+thisref2<-mymort_ref$xpc[65:79]
 1-prod(1-thisref1)
 fn.overdxc2(thisref2)
 
