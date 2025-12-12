@@ -8,7 +8,7 @@ library("readxl")
 ####################################
 
 ## English all-cause mortality rates 
-mymort<-readxl::read_xlsx("timeseries3yrqx19802021.xlsx", sheet="Eng Males qx", skip=4)
+mymort<-readxl::read_xlsx("../timeseries3yrqx19802021.xlsx", sheet="Eng Males qx", skip=4)
 
 ## Use period rates from 2021-23
 mymort_ref<-data.frame(age=0:100, mort=mymort$`2021-2023`)
