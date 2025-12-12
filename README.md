@@ -24,7 +24,7 @@ Run RStudio - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.
 
 ## Explore overdiagnosis in app
 
-Run app - [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/app.R)
+Run app - [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny)
 
 # License
 
