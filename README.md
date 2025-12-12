@@ -22,6 +22,9 @@ It uses the following data files:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=rstudio)
 
+## Explore overdiagnosis in app
+
+[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/main?urlpath=shiny/shiny/app.R)
 
 # License
 

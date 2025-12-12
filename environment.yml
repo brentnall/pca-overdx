@@ -5,3 +5,4 @@ dependencies:
   - r-tidyverse
   - r-readxl
   - rstudio-desktop
+  - r-shinydashboard
