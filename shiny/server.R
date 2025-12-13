@@ -18,8 +18,7 @@ server <- function(input, output) {
         palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
                   "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
         
-        plot(50:85,v$myout[1,]*100, type="l", ylim=c(0,100), ylab="Probability die in 15 years (%)
-", xlab="Age (years)",lwd=2)
+        plot(50:85,v$myout[1,]*100, type="l", ylim=c(0,100), ylab="Probability die in 15 years (%)", xlab="Age (years)",lwd=2)
         grid()
         points(input$inage, 100*v$myout[1,input$inage-49], lwd=10, col=2)
         
