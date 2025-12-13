@@ -40,14 +40,20 @@ fn.overdxc2<-function(inage, inadj){
    
     S2<-c(1,exp(-cumsum(h2))) ## competing risks, survival
 
-    S1<-c(1,1,1,1,1-seq(1,12)*(0.0736)) ## net survival
+    S1L<- c(1,1,1,1,1-seq(1,12)*1/12) ## net survival
+    S1<-  c(1,1,1,1,1-seq(1,12)*(0.0736)) ## net survival
+    S1U<- c(1,1,1,1,1-seq(1,12)*((100-26.7)/12)/100)
 
-    h1<-diff(-log(S1)) ## net hazard
-    
-    myovdx<- 1 - cumsum( (h1/(h1+h2)) * (1-exp(-(h1+h2))) * S1[1:nl] * S2[1:nl])
+    h1L<- diff(-log(S1L)) ## net hazard
+    h1L[nl]<-9999999
+    h1<-  diff(-log(S1)) ## net hazard
+    h1U<- diff(-log(S1U)) ## net hazard
 
+    myovdxL<- 1 - cumsum( (h1L/(h1L+h2)) * (1-exp(-(h1L+h2))) * S1L[1:nl] * S2[1:nl])
+    myovdx<-  1 - cumsum( (h1/ (h1 +h2)) * (1-exp(-(h1+h2)) ) * S1[1:nl]  * S2[1:nl])
+    myovdxU<- 1 - cumsum( (h1U/(h1U+h2)) * (1-exp(-(h1U+h2))) * S1U[1:nl] * S2[1:nl])
 
-    myout<-c(1-prod(1-hall), myovdx[nl])
+    myout<-c(1-prod(1-hall), myovdx[nl], myovdxL[nl], myovdxU[nl])
 
     myout
 
@@ -61,5 +67,7 @@ fn.format.overdx<-function(indeath, inoverdx){
     myout
 
     }
+
+myout0<-sapply(50:85, function(inage) fn.overdxc2(inage, 1))
 
 
