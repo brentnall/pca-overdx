@@ -1,10 +1,15 @@
 # pca-overdx
 
-Analysis of prostate cancer overdiagnosis using data from the CAP trial.
+Some analysis of prostate cancer overdiagnosis.
 
-The analysis code is used in a (currently unpublished) article.
+Here the analysis code is used in two (currently unpublished) articles is provided. The reports are:
+
+1. Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from a randomised trial
+1. Effect of implementing population-based prostate-specific antigen screening on testing rates and prostate cancer overdiagnosis in England: a statistical modelling study (pre-print: https://www.medrxiv.org/content/10.64898/2026.01.23.26344710v2)
 
 ## Overview 
+
+### Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from a randomised trial
 
 The R analysis code is:
 
@@ -18,11 +23,17 @@ It uses the following data files:
 - English  mortality rates 2021-23 release, downloaded from https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/datasets/mortalityratesqxbysingleyearofage/current
 1. timeseries3yrqx19802021.xlsx: 
 
+### Effect of implementing population-based prostate-specific antigen screening on testing rates and prostate cancer overdiagnosis in England: a statistical modelling study
+
+The R analysis code is:
+
+- **projections.R**: R code and analysis in the report. It uses the methodology and data from the report above.
+
 ## Explore analysis in RStudio
 
 Run RStudio - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=rstudio)
 
-## Explore overdiagnosis in app
+## Explore estimates of overdiagnosis as by age and competing mortality rates in an app
 
 Run app - [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/)
 
