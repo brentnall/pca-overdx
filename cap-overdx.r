@@ -1,9 +1,8 @@
 ##_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 ##
-## Analysis code for: Why is prostate cancer overdiagnosis a problem with PSA testing
-## and what can be done about it? (Brentnall et al, submitted 2025).
+## Analysis code for:  Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from the CAP randomised trial (Brentnall et al, submitted 2026).
 ##
-## Date: 9th December 2025
+## Date: 27th Feb 2026
 ## Author: Adam Brentnall
 ##_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
@@ -111,25 +110,25 @@ postscript(file="CAP-overdx-net.eps",horiz=FALSE,onefile=FALSE,width=14*myscale,
 
 par(mfrow=c(2,2))
 ## Plot (a): cumulative incidence
-plot(mynewdta$x, mynewdta$yscreen, type="l", xlab="Time t (years)", ylab="Net risk, %", main="(a)")
+plot(mynewdta$x, mynewdta$yscreen, type="l", xlab="Time t (years)", ylab="Net risk, %", main="(A)")
 lines(mynewdta$x, mynewdta$ycontrol, col=2)
 grid()
 legend("topleft", c("Screening", "Control"), col=c(1,2), lty=1)
 
 ## Plot (b): Difference in cumulative incidence (smoothed)
 lw4<-loess(yscreen-ycontrol~x, mynewdta, span=0.2)
-plot(mynewdta$x, lw4$fitted, type="l", xlab="Time t (years)", ylab="Difference in net risk (screen-control), %", main="(b)")
+plot(mynewdta$x, lw4$fitted, type="l", xlab="Time t (years)", ylab="Difference in net risk (screen-control), %", main="(B)")
 grid()
 
 ## Plot (c): Excess (smoothed)
-plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Screen-detected cancer excess O*(t), %", ylim=c(0,100), main="(c)")
+plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Screen-detected cancer excess O(t), %", ylim=c(0,100), main="(C)")
 ##lines(c(0,15), c(10,10),lty=2, col="gray")
 grid()
 
 ## Plot (d): Compensatory drop, using estimated hazard ratio
 mystart<-2.4
 ## Raw hazard ratio from moving average to estimate hazard separately in control and screening
-plot(myplotdta$x, myplotdta$grad3, log="y", ylim=c(2/3,3/2), type="p", pch=".", xlab="Time t (years)", ylab="HR prostate cancer (screening/control)", main="(d)")
+plot(myplotdta$x, myplotdta$grad3, log="y", ylim=c(2/3,3/2), type="p", pch=".", xlab="Time t (years)", ylab="HR prostate cancer (screening/control)", main="(D)")
 ## smoothed hazard ratio
 lwgrad<-loess(grad3~x, myplotdta[myplotdta$x>mystart,], span=0.4)
 lines(lwgrad$x, lwgrad$fitted, col=1, lwd=2)
