@@ -68,7 +68,7 @@ server <- function(input, output) {
 
     output$overdxcommentary <- renderText({
         
-        paste0("In this scenario the main reason for overdiagnosis is ", c("potential indolent prostate cancer", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
+        paste0("In this scenario the main reason for overdiagnosis is ", c("screen detection of prostate cancer that would not present clinically within 15 years", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
      })
 
     

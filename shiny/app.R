@@ -99,7 +99,7 @@ ui <- pageWithSidebar(
       h2("How should I choose what to enter for competing hazards adjustment?"),
       "Use 1.00 for the average man. To explore what happens for cohorts at a higher or lower risk of death you can change this. For instance, enter 2.0 to double the risk, 0.5 to halve the risk. One reason for considering an adjustment less than 1.0 is that participants in clinical trials are known to have lower competing mortality risks than the general population. For example, 0.86 might be used to reflect the ERSPC trial participants (https://journals.sagepub.com/doi/abs/10.1258/096914104774061074); or 0.46 for UK Biobank males (https://pubmed.ncbi.nlm.nih.gov/28641372/). On the other hand, suppose one wishes to estimate overdiagnosis for heavy lifelong smokers, with a higher mortality risk than on average. The relative hazard after age 60y is likely at least approximately doubled (https://www.bmj.com/content/328/7455/1519), so one could use 2.0.",
       h2("Limitations"),
-      "The calculations are based on a number of assumptions, which are discussed in the accompanying paper",   
+      "The calculations are based on a number of assumptions, which are discussed in the accompanying paper (pre-print: https://doi.org/10.64898/2026.01.26.26344830)",   
       h3("License"),
       "GNU GPL v3. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. Copyright 2025, Adam Brentnall"
 
@@ -116,7 +116,7 @@ ui <- pageWithSidebar(
       h4(textOutput("overdxExpl")),
       h4(textOutput("overdxLU")),
       h3("Reason for overdiagnosis (with main estimate of total overdiagnosis)"),
-      h4("1. Overdiagnosis due to detection of indolent disease: approximately 11.7%."),
+      h4("1. Overdiagnosis due to detection of disease that would not present clinically within 15 years: approximately 11.7%."),
       h4(textOutput("overdx1"))
          
 
@@ -192,7 +192,7 @@ server <- function(input, output) {
 
     output$overdxcommentary <- renderText({
         
-        paste0("In this scenario the main reason for overdiagnosis is ", c("potential indolent prostate cancer", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
+        paste0("In this scenario the main reason for overdiagnosis is ", c("prostate cancer that would not present clinically within 15 years of screening", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
      })
 
     

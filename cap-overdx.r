@@ -139,6 +139,74 @@ grid()
 
 dev.off()
 
+######################################################
+## IJC graphical abstract for paper - charts 
+######################################################
+
+##1. Fig 1A rescaled
+pdf(file="abstract.pdf",width=14, height=10, pointsize=22)
+## Plot (a): cumulative incidence
+plot(mynewdta$x, mynewdta$yscreen, type="l", xlab="Time (years)", ylab="Cumulative incidence (%)", main="", lwd=4)
+lines(mynewdta$x, mynewdta$ycontrol, col=2, lwd=4, lty=2)
+grid()
+legend("topleft", c("Screening", "Control"), col=c(1,2), lty=c(1,2), lwd=3)
+dev.off()
+
+
+
+## 2. Donut for excess
+library(ggplot2)
+ 
+# Create test data.
+data <- data.frame(
+  category=c("Screen detected", "Excess"),
+  count=c(1.19-0.14, 0.14)
+)
+ 
+data$fraction = data$count / sum(data$count)
+
+data$ymax = cumsum(data$fraction)
+
+data$ymin = c(0, head(data$ymax, n=-1))
+
+data$labelPosition <- (data$ymax + data$ymin) / 2
+
+data$label <- c("", "Excess")
+
+pdf("abstract2.pdf", pointsize=28)
+ggplot(data, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=category)) +
+  geom_rect() +
+  geom_text( x=3.5, aes(y=labelPosition, label=label), size=16) +
+  scale_fill_brewer(palette=1, direction=2) +
+  coord_polar(theta="y") +
+  xlim(c(2, 4)) +
+  theme_void() +
+  theme(legend.position = "none")
+dev.off()
+
+##3. Bar chart overdiagnosis
+df <- data.frame(
+  AgeGroup = factor(c("50", "60", "70", "80"),
+                    levels = c("50", "60", "70", "80")),
+  Percent = c(16, 21,32, 58)
+)
+pdf("abstract3.pdf", pointsize=28)
+ggplot(df, aes(x = AgeGroup, y = Percent
+               )) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = paste0(Percent, "%")),
+            vjust = -0.5, size = 10) +
+  ylim(0, 65) +
+  labs(
+    x = "Age at screen diagnosis (years)",
+    y = "",
+    title = ""
+  ) +
+    theme_minimal(base_size = 24) +
+    theme(axis.text.y=element_blank())
+dev.off()
+
+
 ####################################
 ##                                ##      
 ## Crude overdiagnosis estimates  ##

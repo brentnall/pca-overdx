@@ -2,14 +2,14 @@
 
 Some analysis of prostate cancer overdiagnosis.
 
-Here the analysis code used in two (currently unpublished) articles is provided. The reports are:
+Here the analysis code used in two reports is provided. 
 
 1. Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from a randomised trial (pre-print: https://medrxiv.org/cgi/content/short/2026.01.26.26344830v1 )
 1. Effect of implementing population-based prostate-specific antigen screening on testing rates and prostate cancer overdiagnosis in England: a statistical modelling study (pre-print: https://www.medrxiv.org/content/10.64898/2026.01.23.26344710v2 )
 
 ## Overview 
 
-### Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from a randomised trial
+### Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from the CAP randomised trial
 
 The R analysis code is:
 
