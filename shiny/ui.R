@@ -43,8 +43,8 @@ ui <- pageWithSidebar(
       h3(textOutput("overdx")),
       h4(textOutput("overdxExpl")),
       h4(textOutput("overdxLU")),
-      h3("Reason for overdiagnosis (with main estimate of total overdiagnosis)"),
-      h4("1. Overdiagnosis due to detection of disease that would not present clinically within 15 years: approximately 11.7%."),
+      h3("Reasons for estimated overdiagnosis"),
+      h4("1. Detection of disease that would not present clinically within 15 years: approximately 11.7%."),
       h4(textOutput("overdx1"))
          
 

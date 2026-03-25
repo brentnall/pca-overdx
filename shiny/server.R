@@ -63,12 +63,12 @@ server <- function(input, output) {
 
     output$overdx1 <- renderText({
         
-        paste0("2. Overdiagosis due to death from other causes than prostate cancer: ", fn.format(100*v$myout[2,input$inage-49] - 11.7,1), "%")
+        paste0("2. Death from other causes than prostate cancer: ", fn.format(100*v$myout[2,input$inage-49] - 11.7,1), "%")
      })
 
     output$overdxcommentary <- renderText({
         
-        paste0("In this scenario the main reason for overdiagnosis is ", c("screen detection of prostate cancer that would not present clinically within 15 years", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
+        paste0("In this scenario the main reason for estimated overdiagnosis is ", c("screen detection of prostate cancer that would not present clinically within 15 years", "death from other causes than prostate cancer.")[((100*v$myout[2,input$inage-49] - 11.7)>0) +1])
      })
 
     
