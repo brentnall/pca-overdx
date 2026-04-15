@@ -1,8 +1,8 @@
 ##_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 ##
-## Analysis code for:  Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from the CAP randomised trial (Brentnall et al, submitted 2026).
+## Analysis code for:  Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from the CAP randomised trial (Brentnall et al, 2026).
 ##
-## Date: 27th Feb 2026
+## Date: 15th April 2026
 ## Author: Adam Brentnall
 ##_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
@@ -121,7 +121,7 @@ plot(mynewdta$x, lw4$fitted, type="l", xlab="Time t (years)", ylab="Difference i
 grid()
 
 ## Plot (c): Excess (smoothed)
-plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Screen-detected cancer excess O(t), %", ylim=c(0,100), main="(C)")
+plot(mynewdta$x, mynewdta$oSs2*100, type="l", xlab="Time t (years)", ylab="Screen-detected cancer excess E(t), %", ylim=c(0,100), main="(C)")
 ##lines(c(0,15), c(10,10),lty=2, col="gray")
 grid()
 

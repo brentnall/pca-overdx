@@ -7,9 +7,13 @@ Here the analysis code used in two reports is provided.
 1. Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from a randomised trial (pre-print: https://medrxiv.org/cgi/content/short/2026.01.26.26344830v1 )
 1. Effect of implementing population-based prostate-specific antigen screening on testing rates and prostate cancer overdiagnosis in England: a statistical modelling study (pre-print: https://www.medrxiv.org/content/10.64898/2026.01.23.26344710v2 )
 
+## Explore estimates of overdiagnosis as by age and competing mortality rates in an app
+
+Run app - [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/). After this has loaded you can explore how projected overdiagnosis changes by age and competing mortality.
+
 ## Overview 
 
-### Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow␂up from the CAP randomised trial
+### Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from the CAP randomised trial
 
 The R analysis code is:
 
@@ -32,10 +36,6 @@ The R analysis code is:
 ## Explore analysis in RStudio
 
 Run RStudio - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=rstudio). After this has loaded you can run the above scripts, and do your own analysis using the same data.
-
-## Explore estimates of overdiagnosis as by age and competing mortality rates in an app
-
-Run app - [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/). After this has loaded you can explore how projected overdiagnosis changes by age and competing mortality.
 
 # License
 
