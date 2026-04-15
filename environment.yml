@@ -4,5 +4,5 @@ dependencies:
   - r-base=4.3
   - r-tidyverse
   - r-readxl
-  - rstudio-desktop
-  - r-shinydashboard
+  - rstudio-desktop=2024.03.1
+  - r-shinydashboard=0.7.1
