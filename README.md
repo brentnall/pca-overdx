@@ -7,9 +7,9 @@ Here the analysis code used in two reports is provided.
 1. Evaluating the impact of age on prostate cancer overdiagnosis using long-term follow-up from a randomised trial (pre-print: https://medrxiv.org/cgi/content/short/2026.01.26.26344830v1 )
 1. Effect of implementing population-based prostate-specific antigen screening on testing rates and prostate cancer overdiagnosis in England: a statistical modelling study (pre-print: https://www.medrxiv.org/content/10.64898/2026.01.23.26344710v2 )
 
-## Explore estimates of overdiagnosis as by age and competing mortality rates in a Shiny app
+## Dynamically explore estimates of overdiagnosis as by age and competing mortality rates 
 
-Access via [![Shiny](https://img.shields.io/badge/Shiny-deployed-blue?style=flat&logo=RStudio&logoColor=white)](https://brentnall.shinyapps.io/pca-overdx/) or [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/). 
+Shiny app via [![Shiny](https://img.shields.io/badge/Shiny-deployed-blue?style=flat&logo=RStudio&logoColor=white)](https://brentnall.shinyapps.io/pca-overdx/) or [![Render](https://img.shields.io/badge/Render-deployed-brightgreen?style=flat&logo=render&logoColor=white)](https://pca-overdx.onrender.com/) or [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/brentnall/pca-overdx/HEAD?urlpath=shiny/shiny/). 
 
 ## Overview 
 
