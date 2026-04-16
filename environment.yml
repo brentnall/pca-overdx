@@ -1,8 +1,9 @@
 channels:
   - conda-forge
 dependencies:
-  - r-base
-  - r-tidyverse
-  - r-readxl
+  - r-base=4.3
+  - r-tidyverse=2.0
+  - r-readxl=1.4.5
   - rstudio-desktop
-  - r-shinydashboard
+  - r-shinydashboard=0.7.2
+  - r-shiny=1.7.4
